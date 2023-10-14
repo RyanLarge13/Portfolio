@@ -1,8 +1,11 @@
 import Squares from "../components/Squares";
 import Me from "../assets/me.jpg";
 import Typewriter from "typewriter-effect";
-import CalngDesk from "../assets/calng-desktop.png";
+import CalngDesk from "../assets/calng.png";
+import WorkoutBlog from "../assets/Workout-Blog.png";
+import TroyLarge from "../assets/Troy-Large.png";
 import Banner from "../assets/banner.svg";
+import { motion } from "framer-motion";
 import {
   AiFillTwitterCircle,
   AiFillInstagram,
@@ -18,11 +21,24 @@ const Home = () => {
         <Squares top={"top-40"} right={"right-20"} bottom={""} left={""} />
         <Squares top={"top-20"} right={""} bottom={""} left={"left-20"} />
         <Squares top={"top-80"} right={"right-40"} bottom={""} left={""} />
-        <img
-          src={Banner}
-          alt="banner"
-          className="absolute top-20 z-[-1] left-[50%] translate-x-[-50%] max-w-[95%]"
-        />
+        <div className="absolute flex justify-center items-center top-20 right-0 left-0">
+          <motion.img
+            whileHover={{ rotateZ: 0 }}
+            initial={{ opacity: 0, y: -100, rotateZ: 0 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              rotateZ: 7,
+              transformOrigin: "bottom left",
+              transition: {
+                rotateZ: { delay: 1, type: "spring", stiffness: 300 },
+              },
+            }}
+            src={Banner}
+            alt="banner"
+            className="max-w-[95%]"
+          />
+        </div>
         <img
           src={Me}
           alt="me"
@@ -72,7 +88,7 @@ const Home = () => {
         </div>
       </section>
       <section
-        className="min-h-screen bg-slate-100 relative grid grid-cols-2"
+        className="min-h-screen relative grid grid-cols-2 bg-slate-100"
         id="projects"
       >
         <div>
@@ -84,6 +100,26 @@ const Home = () => {
         </div>
         <div className="p-5">
           <h2 className="text-3xl">Calendar Next Generation</h2>
+        </div>
+        <div className="p-5">
+          <h2 className="text-3xl">Troy Large Pastel</h2>
+        </div>
+        <div>
+          <img
+            src={TroyLarge}
+            alt="calendar next gen"
+            className="w-full object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src={WorkoutBlog}
+            alt="calendar next gen"
+            className="w-full object-cover"
+          />
+        </div>
+        <div className="p-5">
+          <h2 className="text-3xl">Workout Blog</h2>
         </div>
       </section>
       <section className="min-h-screen"></section>
