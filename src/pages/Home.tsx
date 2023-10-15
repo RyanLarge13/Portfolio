@@ -14,7 +14,7 @@ import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
 } from "react-icons/bs";
-import projects from "../constants/projects";
+import projects from "../constants/projects.ts";
 import { useState } from "react";
 
 const Home = () => {
@@ -166,7 +166,7 @@ const Home = () => {
             </div>
           ))}
           <div className="absolute bottom-10 left-0 right-0 flex justify-center items-center gap-x-3">
-            {projects.map((proj, index) => (
+            {projects.map((_, index) => (
               <div
                 key={index}
                 className={`rounded-full shadow-md ${
