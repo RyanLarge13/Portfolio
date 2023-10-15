@@ -94,7 +94,7 @@ const Home = () => {
         </div>
       </section>
       <section className="min-h-screen relative" id="projects">
-        <div className="lg:hidden min-h-screen overflow-x-hidden flex justify-start items-start bg-slate-100 relative pt-20">
+        <div className="lg:hidden min-h-screen overflow-x-hidden flex justify-start items-start bg-slate-100 relative">
           {projects.map((proj, index) => (
             <div
               key={index}
