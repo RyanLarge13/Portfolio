@@ -1,4 +1,18 @@
-const Squares = ({ top, right, bottom, left }) => {
+import React from "react"
+
+type SquaresProps = {
+  top: string;
+  right: string;
+  bottom: string;
+  left: string;
+};
+
+const Squares: React.FC<SquaresProps> = ({
+  top,
+  right,
+  bottom,
+  left,
+}: SquaresProps) => {
   return (
     <div
       aria-hidden="true"
