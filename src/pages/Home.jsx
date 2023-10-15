@@ -21,7 +21,7 @@ const Home = () => {
         <Squares top={"top-40"} right={"right-20"} bottom={""} left={""} />
         <Squares top={"top-20"} right={""} bottom={""} left={"left-20"} />
         <Squares top={"top-80"} right={"right-40"} bottom={""} left={""} />
-        <div className="absolute flex justify-center items-center top-20 right-0 left-0">
+        <div className="absolute flex justify-center items-center top-20 right-0 left-0 overflow-x-clip">
           <motion.img
             whileHover={{ rotateZ: 0 }}
             initial={{ opacity: 0, y: -100, rotateZ: 0 }}
@@ -87,39 +87,69 @@ const Home = () => {
           </a>
         </div>
       </section>
-      <section
-        className="min-h-screen relative grid grid-cols-2 bg-slate-100"
-        id="projects"
-      >
-        <div>
-          <img
-            src={CalngDesk}
-            alt="calendar next gen"
-            className="w-full object-cover"
-          />
+      <section className="min-h-screen relative" id="projects">
+        <div className="lg:hidden min-h-screen overflow-x-hidden flex justify-start items-start bg-slate-100">
+          <div>
+            <img
+              src={CalngDesk}
+              alt="calendar next gen"
+              className="w-full object-cover"
+            />
+            <div className="p-3">
+              <h2 className="text-lg font-semibold">
+                Calendar Next Generation
+              </h2>
+              <p className="mt-2">
+                Calendar Next Gen is a cross platform installable PWA
+                web/mobile/desktop application featuring a full fledged calendar
+                with multiple views and a grand selection of functionality,
+                native device features and more.
+              </p>
+              <div className="flex flex-wrap justify-start items-center text-xs my-5 gap-x-3">
+                <div className="rounded-full px-3 py-1 bg-blue-200">
+                  <p>React</p>
+                </div>
+                <div className="rounded-full px-3 py-1 bg-amber-200">
+                  <p>Service Workers</p>
+                </div>
+                <div className="rounded-full px-3 py-1 bg-emerald-200">
+                  <p>Prisma</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="p-5">
-          <h2 className="text-3xl">Calendar Next Generation</h2>
-        </div>
-        <div className="p-5">
-          <h2 className="text-3xl">Troy Large Pastel</h2>
-        </div>
-        <div>
-          <img
-            src={TroyLarge}
-            alt="calendar next gen"
-            className="w-full object-cover"
-          />
-        </div>
-        <div>
-          <img
-            src={WorkoutBlog}
-            alt="calendar next gen"
-            className="w-full object-cover"
-          />
-        </div>
-        <div className="p-5">
-          <h2 className="text-3xl">Workout Blog</h2>
+        <div className="hidden lg:grid grid-cols-2 bg-slate-100 ">
+          <div>
+            <img
+              src={CalngDesk}
+              alt="calendar next gen"
+              className="w-full object-cover"
+            />
+          </div>
+          <div className="p-5">
+            <h2 className="text-3xl">Calendar Next Generation</h2>
+          </div>
+          <div className="p-5">
+            <h2 className="text-3xl">Troy Large Pastel</h2>
+          </div>
+          <div>
+            <img
+              src={TroyLarge}
+              alt="calendar next gen"
+              className="w-full object-cover"
+            />
+          </div>
+          <div>
+            <img
+              src={WorkoutBlog}
+              alt="calendar next gen"
+              className="w-full object-cover"
+            />
+          </div>
+          <div className="p-5">
+            <h2 className="text-3xl">Workout Blog</h2>
+          </div>
         </div>
       </section>
       <section className="min-h-screen"></section>
