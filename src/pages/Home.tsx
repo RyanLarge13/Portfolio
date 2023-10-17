@@ -120,7 +120,50 @@ const Home = () => {
           </div>
         </div> */}
       </section>
-      <section className="min-h-screen"></section>
+      <section className="min-h-screen p-3">
+        <h2 className="text-3xl">Animations</h2>
+        <div className="rounded-md shadow-lg flex flex-col justify-between p-10 items-center w-[300px] h-[300px] mx-auto my-10">
+          <h3 className="text-2xl">Guestures</h3>
+          <motion.div
+            whileTap={{
+              rotateZ: 250,
+              scale: 0.9,
+              transition: { duration: 0.5 },
+            }}
+            className="w-40 h-40 bg-gradient-to-tr from-pink-300 to-fucsia-200 rounded-md shadow-md"
+          ></motion.div>
+        </div>
+        <div className="rounded-md shadow-lg flex flex-col justify-between p-10 items-center w-[300px] h-[300px] mx-auto my-10">
+          <h3 className="text-2xl">Loops</h3>
+          <motion.div
+            initial={{ rotateY: 0 }}
+            animate={{
+              rotateY: 365,
+              transition: {
+                duration: 3,
+                repeat: Infinity,
+              },
+            }}
+            className="w-40 h-40 bg-gradient-to-tr from-pink-300 to-fucsia-200 rounded-md shadow-md"
+          ></motion.div>
+        </div>
+        <div className="rounded-md shadow-lg flex flex-col justify-between p-10 items-center w-[300px] h-[300px] mx-auto my-10">
+          <h3 className="text-2xl">Fades & Transitions</h3>
+          <motion.div
+            initial={{ opacity: 0, x: 30, y: 30 }}
+            animate={{
+              opacity: [1, 0],
+              x: [0, 30],
+              y: [0, 30],
+              transition: {
+                duration: 3,
+                repeat: Infinity,
+              },
+            }}
+            className="w-40 h-40 bg-gradient-to-tr from-pink-300 to-fucsia-200 rounded-md shadow-md"
+          ></motion.div>
+        </div>
+      </section>
     </>
   );
 };

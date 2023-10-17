@@ -7,8 +7,8 @@ import WorkoutBlogVid from "../assets/videos/WorkoutBlogVid.mp4";
 
 const projects = [
   {
-    title: "Calendar next Generation",
-    body: "Calendar next Gen is a cross platform installable PWA application featuring a full fledged calendar with a pluthera of functionality and native device features",
+    title: "Calendar Next Generation",
+    body: "Calendar Next Gen is a cross platform installable PWA application featuring a full fledged calendar with a pluthera of functionality and native device features",
     images: [CalngDesk],
     video: CalngVid,
     tech: [
