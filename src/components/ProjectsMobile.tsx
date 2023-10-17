@@ -31,11 +31,11 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-            <button className="rounded-md px-4 py-2 font-semibold bg-gradient-to-tr from-sky-100 to-cyan-300 shadow-md w-full">
+            <button className="rounded-md px-4 py-2 font-semibold bg-gradient-to-tr from-purple-200 to-purple-300 shadow-md w-full">
               <a href={proj.webLink}>Website</a>
             </button>
-            <button className="mt-3 rounded-md px-4 py-2 font-semibold bg-gradient-to-tr from-green-100 to-emerald-300 shadow-md w-full">
-              <a href={proj.webLink}>Git Repo</a>
+            <button className="mt-3 rounded-md px-4 py-2 font-semibold bg-gradient-to-tr from-purple-100 to-purple-200 shadow-md w-full">
+              <a href={proj.codeLink}>Git Repo</a>
             </button>
           </div>
         </div>
