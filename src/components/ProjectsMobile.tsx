@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import projects from "../constants/projects";
 import ImageSlider from "./ImageSlider";
 import {
@@ -8,6 +8,14 @@ import {
 
 const Projects = () => {
   const [project, setProject] = useState(0);
+  let interval;
+
+  useEffect(() => {
+    interval = setInterval(() => {
+      setProject((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+    }, 15000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="lg:hidden min-h-[95vh] overflow-x-hidden flex justify-start items-start bg-slate-100 relative">
@@ -40,31 +48,17 @@ const Projects = () => {
           </div>
         </div>
       ))}
-      <div
-        className="z-10 text-xl absolute right-5 bottom-10 text-black flex justify-center items-center p-2"
-        onClick={() =>
-          setProject((prev) => (prev === projects.length - 1 ? 0 : prev + 1))
-        }
-      >
-        <BsFillArrowRightCircleFill />
-      </div>
-      <div
-        className="z-10 text-xl absolute left-5 bottom-10 text-black flex justify-center items-center p-2"
-        onClick={() =>
-          setProject((prev) => (prev === 0 ? projects.length - 1 : prev - 1))
-        }
-      >
-        <BsFillArrowLeftCircleFill />
-      </div>
       <div className="absolute bottom-10 left-0 right-0 flex justify-center items-center gap-x-3">
         {projects.map((_, index) => (
-          <div
+          <button
             key={index}
             className={`rounded-full shadow-md ${
               project === index ? "w-4 h-4 bg-black" : "w-3 h-3 bg-slate-500"
             } duration-300`}
-            onClick={() => setProject(index)}
-          ></div>
+            onClick={() => {
+            clearInterval(interval)
+            setProject(index)}}
+          ></button>
         ))}
       </div>
     </div>
