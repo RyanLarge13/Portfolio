@@ -27,13 +27,13 @@ const Projects = () => {
         >
           <ImageSlider proj={proj} />
           <div className="p-3">
-            <h2 className="text-lg font-semibold">{proj.title}</h2>
+            <h2 className="text-lg font-bold">{proj.title}</h2>
             <p className="mt-3 max-w-[400px] text-sm">{proj.body}</p>
             <div className="flex flex-wrap gap-3 my-10">
               {proj.tech.map((tech, techIndex) => (
                 <div
                   key={techIndex}
-                  className={`${tech.color} rounded-full py-1 px-3 shadow-md`}
+                  className={`${tech.color} rounded-full py-1 px-3 shadow-md text-sm`}
                 >
                   <p>{tech.text}</p>
                 </div>
