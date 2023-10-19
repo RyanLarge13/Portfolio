@@ -11,6 +11,7 @@ import {
 } from "react-icons/ai";
 import { BiLogoFacebookCircle } from "react-icons/bi";
 import ProjectsMobile from "../components/ProjectsMobile";
+import ProJectsDesktop from "../components/ProJectsDesktop";
 
 const Home = () => {
   return (
@@ -87,38 +88,7 @@ const Home = () => {
       </section>
       <section className="min-h-screen relative" id="projects">
         <ProjectsMobile />
-        {/* <div className="hidden lg:grid grid-cols-2 bg-slate-100 ">
-          <div>
-            <img
-              src={CalngDesk}
-              alt="calendar next gen"
-              className="w-full object-cover"
-            />
-          </div>
-          <div className="p-5">
-            <h2 className="text-3xl">Calendar Next Generation</h2>
-          </div>
-          <div className="p-5">
-            <h2 className="text-3xl">Troy Large Pastel</h2>
-          </div>
-          <div>
-            <img
-              src={TroyLarge}
-              alt="calendar next gen"
-              className="w-full object-cover"
-            />
-          </div>
-          <div>
-            <img
-              src={WorkoutBlog}
-              alt="calendar next gen"
-              className="w-full object-cover"
-            />
-          </div>
-          <div className="p-5">
-            <h2 className="text-3xl">Workout Blog</h2>
-          </div>
-        </div> */}
+        <ProJectsDesktop />
       </section>
       <section className="min-h-screen p-3">
         <h2 className="text-3xl"></h2>

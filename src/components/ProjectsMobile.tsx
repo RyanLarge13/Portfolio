@@ -1,14 +1,20 @@
 import { useState, useEffect } from "react";
-import projects from "../constants/projects";
 import ImageSlider from "./ImageSlider";
-import {
-  BsFillArrowRightCircleFill,
-  BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
+import projects from "../constants/projects.ts";
+
+type Proj = {
+  title: string;
+  body: string;
+  images: string[];
+  video: string;
+  tech: { text: string; color: string }[];
+  webLink: string;
+  codeLink: string;
+};
 
 const Projects = () => {
   const [project, setProject] = useState(0);
-  let interval;
+  let interval: number;
 
   useEffect(() => {
     interval = setInterval(() => {
@@ -18,14 +24,14 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="lg:hidden min-h-[95vh] overflow-x-hidden flex justify-start items-start bg-slate-100 relative">
-      {projects.map((proj, index) => (
+    <div className="lg:hidden min-h-[95vh] pb-20 overflow-x-hidden flex justify-start items-start bg-slate-100 relative">
+      {projects.map((proj: Proj, index: number) => (
         <div
           key={index}
           className="min-w-full duration-300"
           style={{ transform: `translateX(-${project * 100}%)` }}
         >
-          <ImageSlider proj={proj} />
+          <ImageSlider proj={proj} mobile={true} />
           <div className="p-3">
             <h2 className="text-lg font-bold">{proj.title}</h2>
             <p className="mt-3 max-w-[400px] text-sm">{proj.body}</p>
@@ -56,8 +62,9 @@ const Projects = () => {
               project === index ? "w-4 h-4 bg-black" : "w-3 h-3 bg-slate-500"
             } duration-300`}
             onClick={() => {
-            clearInterval(interval)
-            setProject(index)}}
+              clearInterval(interval);
+              setProject(index);
+            }}
           ></button>
         ))}
       </div>

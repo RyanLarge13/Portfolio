@@ -12,3 +12,33 @@ body {
   font-family: "Mouse Memoirs", sans-serif;
   font-family: "Share Tech Mono", monospace;
 }
+
+/* For Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+/* For Firefox */
+::-moz-scrollbar {
+  width: 5px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: black;
+}
+
+/* For Internet Explorer and Edge */
+/* Note that the following properties work in Microsoft Edge, not in Internet Explorer */
+/* For IE, you might need to use a browser-specific CSS property */
+/* such as ::-ms-scrollbar-thumb for Edge (not IE) */
+*::-ms-scrollbar {
+  width: 5px;
+}
+
+*::-ms-scrollbar-thumb {
+  background-color: black;
+}
