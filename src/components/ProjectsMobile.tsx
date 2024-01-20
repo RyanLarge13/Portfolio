@@ -48,7 +48,7 @@ const Projects = () => {
             <button className="rounded-md px-4 py-2 font-semibold bg-gradient-to-tr from-purple-200 to-purple-300 shadow-md w-full">
               <a href={proj.webLink}>Website</a>
             </button>
-            <button className="mt-3 rounded-md px-4 py-2 font-semibold bg-gradient-to-tr from-purple-100 to-purple-200 shadow-md w-full">
+            <button className="mt-3 px-4 py-2 outline outline-black w-full">
               <a href={proj.codeLink}>Git Repo</a>
             </button>
           </div>
